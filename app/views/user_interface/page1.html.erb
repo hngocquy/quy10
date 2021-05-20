@@ -1,0 +1,269 @@
+
+
+      <!--====== Primary Slider ======-->
+     <!--        <div class="s-skeleton s-skeleton--h-600">
+                <div class="owl-carousel" id="hero-slider">
+
+              
+                 
+                </div>
+            </div> -->
+            <!--====== End - Primary Slider ======-->
+
+                <%=render "layouts/slider" %>
+            <!--====== Section 1 ======-->
+            <div class="u-s-p-y-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-46">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">SHOP BY DEALS</h1>
+
+                                    <span class="section__span u-c-silver">BROWSE FAVOURITE DEALS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+  
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 u-s-m-b-30">
+                                <a class="collection" href="shop-side-version-2.html">
+                                    <div class="aspect aspect--bg-grey aspect--square">
+                                        <%= image_tag 'product/sll5.jpg', class: "aspect__img collection__img"  %>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-7 col-md-7 u-s-m-b-30">
+
+                                <a class="collection" href="shop-side-version-2.html">
+                                    <div class="aspect aspect--bg-grey aspect--1286-890">
+                                         <%= image_tag 'product/sll2.jpg', class: "aspect__img collection__img"  %>
+                                    </div>
+                                </a></div>
+                            <div class="col-lg-7 col-md-7 u-s-m-b-30">
+
+                                <a class="collection" href="shop-side-version-2.html">
+                                    <div class="aspect aspect--bg-grey aspect--1286-890">
+                                       <%= image_tag 'product/sll1.jpg', class: "aspect__img collection__img"  %>
+                                        </div>
+                                </a></div>
+                            <div class="col-lg-5 col-md-5 u-s-m-b-30">
+
+                                <a class="collection" href="shop-side-version-2.html">
+                                    <div class="aspect aspect--bg-grey aspect--square">
+                                       <%= image_tag 'product/sll4.jpg', class: "aspect__img collection__img"  %>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--====== Section Content ======-->
+            </div>
+            <!--====== End - Section 1 ======-->
+
+
+            <!--====== Section 2 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-16">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">TOP TRENDING</h1>
+
+                                    <span class="section__span u-c-silver">CHOOSE CATEGORY</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="filter-category-container">
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">ALL</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".headphone">HEADPHONES</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".smartphone">SMARTPHONES</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".sportgadget">SPORT GADGETS</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".dslr">DSLR</button></div>
+                                </div>
+                                <div class="filter__grid-wrapper u-s-m-t-30">
+                                    <div class="row">
+                                    <% @data_product.each do |row|%>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                              <a class="aspect aspect--bg-grey aspect--square u-d-block" href="/pageDetailProduct?id_product=<%= row.id%>">
+                                                        <%= image_tag url_for(row.image), class: "aspect__img"  %>
+
+                                                    </a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+                                                                <a href="/pageDetailProduct?id_product=<%= row.id%>" data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Electronics</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="/pageDetailProduct?id_product=<%= row.id%>"><%= row.name_pro %></a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(23)</span></div>
+                                                    <!--====== Pagination ======-->
+
+                                                <span class="product-o__price"> 
+                                            </div>
+                                        </div>
+                                    <%end%>
+                                    </div>
+                                </div>
+                                                   <div class="u-s-p-y-60">
+
+                                    <!--====== Pagination ======-->
+                                    <ul class="shop-p__pagination">
+                                        <li class="is-active">
+
+                                         <%= will_paginate @data_product  %></li>
+                                        <li>
+
+
+                                          </a></li>
+                                    </ul>
+                                    <!--====== End - Pagination ======-->
+                                </div>
+                              
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 2 ======-->
+
+
+            <!--====== Section 3 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-46">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">DEAL OF THE DAY</h1>
+
+                                    <span class="section__span u-c-silver">BUY DEAL OF THE DAY, HURRY UP! THESE NEW PRODUCTS WILL EXPIRE SOON.</span>
+
+                                    <span class="section__span u-c-silver">ADD THESE ON YOUR CART.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- quần -->
+                        <div class="filter__grid-wrapper u-s-m-t-30">
+                                    <div class="row">
+                                    <% @data_product1.each do |row|%>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                        <%= image_tag url_for(row.image), class: "aspect__img"  %>
+                                                    </a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+                                                                <a href="/pageDetailProduct?id_user=<%=@id_user%>&id_product=<%= row.id%>" data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a>
+                                                                 
+                                                            </li>
+                                                            <li>
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Electronics</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html"><%= row.name_pro %></a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(23)</span></div>
+
+                                                <span class="product-o__price"> <%= row.price_pro %>
+                                            </div>
+                                        </div>
+                                    <%end%>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+
+
+                <!--====== End - Section Intro ======-->
+
+
+                <!--====== Section Content ======-->
+                
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 3 ======-->
+
+  
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+</script>
+

@@ -1,0 +1,40 @@
+       <div class="pd-20 card-box mb-30">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="text-blue h4">category</h4>
+            </div>
+            <div class="pull-right">
+             <%= link_to 'Show', @manacate, class: "btn btn-primary btn-sm scroll-click" %> |
+             <%= link_to 'Back', manacates_path, class: "btn btn-primary btn-sm scroll-click" %>
+            </div>
+          </div>
+       <%= form_with(model: manacate) do |form| %>
+              <% if manacate.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(manacate.errors.count, "error") %> prohibited this manacate from being saved:</h2>
+
+                  <ul>
+                    <% manacate.errors.each do |error| %>
+                      <li><%= error.full_message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            
+                  <div class="form-group row">
+                       <%= form.label :name_category, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                         <%= form.text_field :name_category, class: "form-control", placeholder: "Nhập tên danh mục", required: "true"%>
+                    </div>
+                  </div>
+                   <div class="form-group row">
+                       <%= form.label :desc, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                         <%= form.text_area :desc, class: "form-control", placeholder: "Nhập tên danh mục" %>
+                    </div>
+                  </div>
+                  
+              
+               <%= form.submit class: "btn btn-primary btn-sm scroll-click" %>
+       <% end %>
+        </div>

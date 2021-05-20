@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index User Interface</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <h1>Đây là quản trị viên</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-3" style="background: #BBBBBB">
+                <a style="color: black" >
+                    Thêm
+                </a>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageAddCategory" style="color: black">Thêm danh mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageAddProduct?id_user=<%=@id_user%>" style="color: black">Thêm sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3" style="background: #DDDDDD">
+                <a style="color: black" >
+                    Sửa
+                </a>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageEditCategory" style="color: black">Sửa danh mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageEditProduct?id_user=<%=@id_user%>" style="color: black">Sửa sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3" style="background: #EEEEEE">
+                 <a style="color: black" >
+                    Xóa
+                </a>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageEditCategory" style="color: black">Xóa danh mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pageEditProduct?id_user=<%=@id_user%>" style="color: black">Xóa sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+

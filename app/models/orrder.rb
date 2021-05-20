@@ -1,0 +1,2 @@
+class Orrder < ApplicationRecord
+end

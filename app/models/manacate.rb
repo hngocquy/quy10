@@ -1,0 +1,2 @@
+class Manacate < ApplicationRecord
+end

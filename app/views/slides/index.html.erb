@@ -1,0 +1,46 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="pd-20 card-box mb-30">
+          <div class="clearfix mb-20">
+                      <div class="pull-left">
+                        <h4 class="text-blue h4">Slide</h4>
+                
+                      </div>
+                      <div class="pull-right">
+                      <%= link_to 'New Slide', new_slide_path, class: "btn btn-primary btn-sm scroll-click" %>
+                      </div>
+                    </div>
+                    <p id="notice"><%= notice %></p>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">image</th>
+                          <th scope="col">Name slide</th>
+                          <th scope="col">desc</th>
+                          
+                       
+                        </tr>
+                      </thead>
+                      <tbody>   
+                        <% @slides.each do |slide| %>     
+                        <tr>
+                                  
+                              <td>#</td>
+                               <td><%= image_tag url_for(slide.image), style: "width: 100px; height: 100px" %></td>
+                              <td><%= slide.title %></td>
+                              <td><%= slide.desc %></td>
+
+                              
+                                   <td><span class="badge badge-primary"><%= link_to 'Show', slide %></span></td>
+                                   <td><span class="badge badge-primary"><%= link_to 'Edit', edit_slide_path(slide) %></span></td>
+                                   <td><span class="badge badge-primary"><%= link_to 'Destroy', slide, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+                             </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+                   
+            </div>
+          </div>
+        </div>

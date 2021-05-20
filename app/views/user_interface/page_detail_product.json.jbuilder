@@ -1,0 +1,1 @@
+json.array! @user_interface, partial: "user_interface/mnproduct", as: :mnproductH

@@ -1,0 +1,2 @@
+class OrrderItem < ApplicationRecord
+end

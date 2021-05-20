@@ -1,0 +1,61 @@
+
+
+     <div class="pd-20 card-box mb-30">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="text-blue h4">Add Slide</h4>
+            </div>
+            <div class="pull-right">
+             <%= link_to 'Show', @slide, class: "btn btn-primary btn-sm scroll-click" %> |
+             <%= link_to 'Back', slides_path, class: "btn btn-primary btn-sm scroll-click" %>
+            </div>
+          </div>
+               <%= form_with(model: slide) do |form| %>
+                <% if slide.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(slide.errors.count, "error") %> prohibited this slide from being saved:</h2>
+
+                    <ul>
+                      <% slidet.errors.each do |error| %>
+                        <li><%= error.full_message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+                  <div class="form-group row">
+                       <%= form.label :Name, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.text_field :title,  class: "form-control", placeholder: "Nhập tên " %>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                       <%= form.label :image, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.file_field :image,  class: "form-control"%>
+                    </div>
+                  </div>
+                   
+                    <div class="form-group row">
+                       <%= form.label :desc, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.text_field :desc, class: "form-control", placeholder: "Nhập nội dung", required: "true"%>
+                    </div>
+                  </div>
+                           
+                    
+                  
+
+                
+              
+                   
+                            
+                   <!--    <= form.collection_select( Manacate.all, :name_category, {}, { :multiple => false } ) %>  <option value="">Select City</option> -->
+                    
+                   
+                  
+              
+               <%= form.submit class: "btn btn-primary btn-sm scroll-click" %>
+       <% end %>
+        </div>
+

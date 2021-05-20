@@ -1,0 +1,2 @@
+module MnproductsHelper
+end

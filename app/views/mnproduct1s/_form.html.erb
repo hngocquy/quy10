@@ -1,0 +1,71 @@
+
+       <div class="pd-20 card-box mb-30">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="text-blue h4">Add product1</h4>
+            </div>
+            <div class="pull-right">
+             <%= link_to 'Show', @mnproduct1, class: "btn btn-primary btn-sm scroll-click" %> |
+             <%= link_to 'Back', mnproduct1s_path, class: "btn btn-primary btn-sm scroll-click" %>
+            </div>
+          </div>
+               <%= form_with(model: mnproduct1) do |form| %>
+                <% if mnproduct1.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(mnproduct1.errors.count, "error") %> prohibited this mnproduct from being saved:</h2>
+
+                    <ul>
+                      <% mnproduct1.errors.each do |error| %>
+                        <li><%= error.full_message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+                  <div class="form-group row">
+                       <%= form.label :name_product, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.text_field :name_pro,  class: "form-control", placeholder: "Nhập tên danh mục", required: "true"%>
+                    </div>
+                  </div>
+                    <div class="form-group row">
+                       <%= form.label :image_product, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.file_field :image,  class: "form-control", required: "true"%>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label>Select category :</label>
+              
+                   
+                            
+                   <!--    <= form.collection_select( Manacate.all, :name_category, {}, { :multiple => false } ) %>  <option value="">Select City</option> -->
+                    
+                    </div>
+                    <div class="form-group row">
+                       <%= form.label :price_product, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.text_field :price_pro,  class: "form-control", placeholder: "Nhập Giá sản phẩm", required: "true"%>
+                    </div>
+                  </div>
+                    <div class="form-group row">
+                       <%= form.label :name_product, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                           <%= form.text_field :name_pro,  class: "form-control", placeholder: "Nhập tên danh mục", required: "true"%>
+                    </div>
+                  </div>
+                   <div class="form-group row">
+                       <%= form.label :Mô_tả, class: "col-sm-12 col-md-10" %>
+                    <div class="col-sm-12 col-md-10">
+                         <%= form.text_area :desc_pro, class: "form-control" %>
+                    </div>
+                  </div>
+                  
+              
+               <%= form.submit class: "btn btn-primary btn-sm scroll-click" %>
+       <% end %>
+        </div>
+
+
+
+
